@@ -17,9 +17,10 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
+    compileSdk 34
     defaultConfig {
         minSdkVersion 27
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.0"
@@ -28,9 +29,10 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+    namespace 'com.example.glass.ui'
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.robolectric:robolectric:4.1'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.12.1'
 }
